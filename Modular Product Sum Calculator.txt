@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main()
+{
+    int mod,num1,num2,modsum=0,sum=0;
+    while (num1<1||num2<1||num1>100||num2>100){
+        printf("Enter a number between 1 and 100\n");
+        printf("First number: \n");
+        scanf("%d",&num1);
+        printf("Second number: \n");
+        scanf("%d",&num2);
+    }
+    printf("Enter a mod: ");
+    scanf("%d",&mod);
+
+    if(num1<num2)
+    {
+        for(int i=num1;i<=num2;i++)
+        {
+            modsum=i%mod;
+            sum+=i*modsum;
+            printf("(%d*%d)",i,modsum);
+            if(i<num2)
+                printf("+");
+            else
+                printf("\n%d",sum);
+        }
+    }
+    if(num1>num2)
+    {
+        for(int i=num2;i<=num1;i++)
+        {
+            modsum=i%mod;
+            sum+=i*modsum;
+            printf("(%d*%d)",i,modsum);
+            if(i<num1)
+                printf("+");
+            else
+                printf("\n%d",sum);
+        }
+    }
+}

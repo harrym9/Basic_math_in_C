@@ -1,0 +1,70 @@
+#include <stdio.h>
+
+int main()
+{
+    int num1,num2,num3,num4,choice;
+    printf("Enter first number: ");
+    scanf("%d",&num1);
+    printf("Enter second number: ");
+    scanf("%d",&num2);
+    printf("Enter third number: ");
+    scanf("%d",&num3);
+    printf("Enter fourth number: ");
+    scanf("%d",&num4);
+
+    printf("1. List negative numbers\n");
+    printf("2. List positive numbers\n");
+    printf("3. List odd numbers\n");
+    printf("4. List even numbers\n");
+    printf("Make a choice: ");
+    scanf("%d",&choice);
+
+    if(choice==1)
+    {
+        if(num1<0)
+            printf("%d ",num1);
+        if(num2<0)
+            printf("%d ",num2);
+        if(num3<0)
+            printf("%d ",num3);
+        if(num4<0)
+            printf("%d",num4);
+    }
+    else if(choice==2)
+    {
+        if(num1>0)
+            printf("%d ",num1);
+        if(num2>0)
+            printf("%d ",num2);
+        if(num3>0)
+            printf("%d ",num3);
+        if(num4>0)
+            printf("%d",num4);
+    }
+    else if(choice==3)
+    {
+        if(num1%2!=0)
+            printf("%d ",num1);
+        if(num2%2!=0)
+            printf("%d ",num2);
+        if(num3%2!=0)
+            printf("%d ",num3);
+        if(num4%2!=0)
+            printf("%d",num4);
+    }
+    else if(choice==4)
+    {
+        if(num1%2==0)
+            printf("%d ",num1);
+        if(num2%2==0)
+            printf("%d ",num2);
+        if(num3%2==0)
+            printf("%d ",num3);
+        if(num4%2==0)
+            printf("%d",num4);
+    }
+    else
+        printf("Not a valid choice\n");
+    return 0;
+}
+
